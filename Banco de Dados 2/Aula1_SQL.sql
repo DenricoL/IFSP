@@ -1,7 +1,7 @@
--- cria banco de dados
+-- Cria o banco de dados
 CREATE DATABASE empresaCJ3025721;
 GO
 
---Habilita o contexto
+-- Habilita o contexto
 USE empresaCJ3025721;
 GO
