@@ -65,3 +65,24 @@ SELECT ID AS 'Código do Funcionário',
 	   Salario AS 'Salário'
 FROM FUNCIONARIOS;
 GO
+
+-- Exibe a tabela
+SELECT * FROM FUNCIONARIOS;
+GO
+
+-- Utilizando TOP para exibir somente os 3 primeiros registros da tabela FUNCIONARIOS
+SELECT TOP 3 * FROM FUNCIONARIOS;
+GO
+
+-- Utilizando TOP para exibir somente os 3 primeiros registros da tabela
+-- Exibe o somente o ID e o nome do funcionário
+SELECT TOP 3
+	ID,
+	Nome
+FROM FUNCIONARIOS;
+GO
+
+-- Selecionando e exibindo apenas funcionários masculinos com salário acima de 1000
+SELECT * FROM FUNCIONARIOS
+WHERE Sexo = 'M' AND Salario > 1000;
+GO
