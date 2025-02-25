@@ -86,3 +86,32 @@ GO
 SELECT * FROM FUNCIONARIOS
 WHERE Sexo = 'M' AND Salario > 1000;
 GO
+
+/*
+Seleciona todos os funcionários e ordena a 
+exibição em ordem alfabética ascendente (A-Z)
+*/
+SELECT * FROM FUNCIONARIOS
+ORDER BY Nome ASC;
+GO
+
+/*
+Seleciona todos os funcionários e ordena a 
+exibição em ordem alfabética descendente (Z-A)
+*/
+SELECT * FROM FUNCIONARIOS
+ORDER BY Nome DESC;
+GO
+
+-- Insere dois novos funcionários (nomes iguais)
+INSERT INTO FUNCIONARIOS VALUES
+	(9, 'Maria Cristina', 'F', '21/09/2012', 1700.00),
+	(10, 'Maria Cristina', 'F', '10/10/2017', 1400.00);
+GO
+
+
+SELECT * FROM FUNCIONARIOS
+	WHERE Salario < 3000
+	ORDER BY Nome, Salario DESC;
+GO
+	
