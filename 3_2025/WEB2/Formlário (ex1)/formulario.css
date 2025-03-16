@@ -1,0 +1,26 @@
+body 
+{
+    background-color: rgb(27, 27, 27);
+    color: white;
+    padding-top: 130px;
+}
+
+.align
+{
+    display: flex;
+    justify-content: center;
+}
+
+form 
+{
+    color: aquamarine;
+    background-color: rgb(43, 30, 80);
+    padding: 30px 100px;
+    border-radius: 17px;
+}
+
+.enviar:hover
+{
+    background-color: aquamarine;
+    transition: 0.3s;
+}
