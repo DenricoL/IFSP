@@ -37,7 +37,7 @@ VALUES (2, 'Pedro Pereira', 'M', '25/05/2015', 990.00);
 GO
 
 /*
-Tentando inserir um funcion�rio em um ID j� cadastrado
+Tentando inserir um funcionário em um ID já cadastrado
 INSERT INTO FUNCIONARIOS 
 VALUES (2, 'Maria Cristina', 'F', '10/09/2015', 1200.00);
 GO 
@@ -48,21 +48,21 @@ INSERT INTO FUNCIONARIOS
 VALUES (3, 'Maria Cristina', 'F', '10/09/2015', 1200.00);
 GO
 INSERT INTO FUNCIONARIOS
-VALUES (4, 'Ant�nio Carlos', 'M', '15/05/2015', 990.00);
+VALUES (4, 'Antônio Carlos', 'M', '15/05/2015', 990.00);
 GO
 
 -- Inserindo quatro novos registros (sintaxe diferente)
 INSERT INTO FUNCIONARIOS VALUES
 	(5, 'Marcelo Augusto', 'M', '09/12/2017', 1900.00),
 	(6, 'Pedro Silva', 'M', '15/11/2015', 1050.00),
-	(7, 'M�nica da Silva', 'F', '12/10/2014', 3000.00),
+	(7, 'Mônica da Silva', 'F', '12/10/2014', 3000.00),
 	(8, 'Tiago Lima', 'M', '10/05/2016', 1350.00);
 GO
 
-SELECT ID AS 'C�digo do Funcion�rio',
+SELECT ID AS 'Código do Funcionário',
 	   Nome,
 	   Sexo,
-	   Salario AS 'Sal�rio'
+	   Salario AS 'Salário'
 FROM FUNCIONARIOS;
 GO
 
@@ -75,35 +75,35 @@ SELECT TOP 3 * FROM FUNCIONARIOS;
 GO
 
 -- Utilizando TOP para exibir somente os 3 primeiros registros da tabela
--- Exibe o somente o ID e o nome do funcion�rio
+-- Exibe o somente o ID e o nome do funcionário
 SELECT TOP 3
 	ID,
 	Nome
 FROM FUNCIONARIOS;
 GO
 
--- Selecionando e exibindo apenas funcion�rios masculinos com sal�rio acima de 1000
+-- Selecionando e exibindo apenas funcionários masculinos com salário acima de 1000
 SELECT * FROM FUNCIONARIOS
 WHERE Sexo = 'M' AND Salario > 1000;
 GO
 
 /*
-Seleciona todos os funcion�rios e ordena a 
-exibi��o em ordem alfab�tica ascendente (A-Z)
+Seleciona todos os funcionários e ordena a 
+exibição em ordem alfabética ascendente (A-Z)
 */
 SELECT * FROM FUNCIONARIOS
 ORDER BY Nome ASC;
 GO
 
 /*
-Seleciona todos os funcion�rios e ordena a 
-exibi��o em ordem alfab�tica descendente (Z-A)
+Seleciona todos os funcionários e ordena a 
+exibição em ordem alfabética descendente (Z-A)
 */
 SELECT * FROM FUNCIONARIOS
 ORDER BY Nome DESC;
 GO
 
--- Insere dois novos funcion�rios (nomes iguais)
+-- Insere dois novos funcionários (nomes iguais)
 INSERT INTO FUNCIONARIOS VALUES
 	(9, 'Maria Cristina', 'F', '21/09/2012', 1700.00),
 	(10, 'Maria Cristina', 'F', '10/10/2017', 1400.00);
@@ -114,4 +114,155 @@ SELECT * FROM FUNCIONARIOS
 	WHERE Salario < 3000
 	ORDER BY Nome, Salario DESC;
 GO
-	
+
+
+-- Criação de uma tabela para testes
+CREATE TABLE TESTE (
+	ID INT,
+	Nome CHAR(10)
+);
+GO
+
+-- Comando específico do SQL Server para exibir a estrutura da tabela
+EXEC sp_columns TESTE;
+GO
+
+-- Renomeando informações do sistema para o usuário
+SELECT TABLE_CATALOG AS 'Banco de Dados',
+	   TABLE_NAME AS 'Tabela',
+	   ORDINAL_POSITION AS 'Posição',
+	   COLUMN_NAME AS 'Coluna',
+	   DATA_TYPE AS 'Tipo de Dados',
+	   COLLATION_NAME AS 'Idioma da Coluna',
+	   IS_NULLABLE AS 'Aceita Nulo'
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'TESTE';
+GO
+
+-- Altera informações da tabela
+ALTER TABLE TESTE
+	ALTER COLUMN Nome CHAR(50);
+GO
+
+ALTER TABLE TESTE
+	ADD Sexo CHAR(1);
+GO
+
+ALTER TABLE TESTE
+	ADD DataNascimento CHAR(10);
+GO
+
+ALTER TABLE TESTE
+	DROP COLUMN DataNascimento; -- Remove uma coluna
+GO
+
+ALTER TABLE TESTE
+	ALTER COLUMN ID INT NOT NULL;
+GO
+
+ALTER TABLE TESTE
+	ADD CONSTRAINT pk_id PRIMARY KEY (ID); -- Adiciona uma restrição
+GO
+
+-- Comando específico do SQL Server para exibir as restrições
+EXEC sp_helpconstraint TESTE;
+GO
+
+-- Exclui uma tabela
+DROP TABLE TESTE;
+GO
+
+-- Aplicando os conceitos anteriores em tabelas "reais"
+CREATE TABLE CLIENTES (
+	ID INT PRIMARY KEY,
+	Nome VARCHAR(50) NOT NULL,
+	Sexo CHAR(1) NULL,
+	Idade INT CHECK (Idade > 18) NOT NULL,
+	CPF CHAR(11) UNIQUE NOT NULL,
+	Email VARCHAR(200) DEFAULT 'meu@email.com' NOT NULL
+);
+GO
+
+CREATE TABLE #TabelaA (
+	ID INT NOT NULL,
+	Nome VARCHAR(25) NOT NULL,
+	Sexo CHAR(1) NULL,
+	PRIMARY KEY (ID)
+);
+GO
+
+INSERT INTO #TabelaA VALUES
+	(1, 'Marcelo Augusto', 'M'),
+	(2, 'Paula Maurícia', 'F');
+GO
+
+SELECT * FROM #TabelaA
+GO
+
+CREATE TABLE #TabelaB (
+	ID INT NOT NULL,
+	Nome VARCHAR(25) NOT NULL,
+	Sexo CHAR(1) NULL,
+	PRIMARY KEY (ID)
+);
+GO
+
+INSERT INTO #TabelaB VALUES
+	(1, 'Marcelo Augusto', 'M'),
+	(2, 'Maria Cristina', 'F');
+GO
+
+SELECT * FROM #TabelaB
+GO
+
+INSERT INTO #TabelaA
+	SELECT ID,
+		   Nome,
+		   Sexo 
+	FROM FUNCIONARIOS
+	WHERE ID > 2;
+GO
+
+SELECT CONSTRAINT_CATALOG AS 'Banco de Dados',
+	   TABLE_NAME AS 'Tabela',
+	   CONSTRAINT_TYPE AS 'Tipo de Restrição',
+	   CONSTRAINT_NAME AS 'Nome da Restrição'
+FROM tempdb.INFORMATION_SCHEMA.TABLE_CONSTRAINTS
+WHERE TABLE_NAME LIKE '#TabelaA';
+GO
+
+-- Criando uma cópia de uma determinada tabela
+SELECT *
+	INTO FuncionariosCOPIA
+FROM FUNCIONARIOS;
+GO
+
+SELECT * FROM FuncionariosCOPIA;
+GO
+
+SELECT TABLE_CATALOG AS 'Banco de Dados',
+	   TABLE_NAME AS 'Tabela',
+	   ORDINAL_POSITION AS 'Posição',
+	   COLUMN_NAME AS 'Coluna',
+	   DATA_TYPE AS 'Tipo de Dados',
+	   COLLATION_NAME AS 'Idioma da Coluna',
+	   IS_NULLABLE AS 'Aceita Nulo'
+FROM INFORMATION_SCHEMA.COLUMNS
+WHERE TABLE_NAME = 'FuncionariosCOPIA';
+GO
+
+SELECT CONSTRAINT_CATALOG AS 'Banco de Dados',
+	   TABLE_NAME AS 'Tabela',
+	   CONSTRAINT_TYPE AS 'Tipo de Restrição',
+	   CONSTRAINT_NAME AS 'Nome da Restrição'
+FROM INFORMATION_SCHEMA.TABLE_CONSTRAINTS
+WHERE TABLE_NAME IN ('Funcionarios', 'FuncionariosCOPIA');
+GO
+
+ALTER TABLE FuncionariosCOPIA
+	ADD CONSTRAINT pk_id PRIMARY KEY (ID);
+GO
+
+-- Comando específico do SQL Server para exibir ajuda sobre algo
+EXEC sp_help 'CLIENTES';
+GO
