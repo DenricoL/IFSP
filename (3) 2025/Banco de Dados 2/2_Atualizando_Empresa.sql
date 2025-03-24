@@ -1,4 +1,4 @@
-USE EmpresaCJ3025721;
+USE empresaCJ3025721;
 GO
 
 -- Exibe informações de tabelas já existentes no banco de dados atual
