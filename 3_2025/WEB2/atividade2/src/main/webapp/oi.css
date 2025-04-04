@@ -1,0 +1,52 @@
+body {
+    background-color: rgb(1, 2, 1);
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.align {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.borda-animada {
+    position: relative;
+    padding: 5px; 
+    border-radius: 20px;
+    background: linear-gradient(90deg,
+        #00ff80, #0088c7,  #008833, #013481, #00ff55, #024c6e);
+    background-size: 300% 100%;
+    animation: bordaAnimada 6s linear infinite;
+}
+
+.mensagem {
+    position: relative;
+    font-size: 22px;
+    color: rgb(0, 85, 212);
+    background-color: rgb(0, 14, 0);
+    padding: 30px 100px;
+    border-radius: 17px;
+    z-index: 1;
+    text-align: center;
+}
+
+@keyframes bordaAnimada {
+    0% {
+        background-position: 150% 50%;
+    }
+
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 200% 70%;
+    }
+}
