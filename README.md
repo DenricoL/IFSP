@@ -2,7 +2,7 @@
 Este repositório registra meus estudos no curso de Análise e Desenvolvimento de Sistemas por cada semestre
 
 # Diretórios:
-## 2_2024.2 (Segundo semestre)
+## 2_2024.2 (segundo semestre)
 __Banco de Dados 1:__ pesquisas e projetos sobre banco de dados e Diagramas Entidade Relacionamento (DER)
 
 __C++:__ exercícios do livro Algoritmos (Manzano) feitos em c++
