@@ -1,0 +1,37 @@
+body
+{
+    background-color: rgb(27, 27, 27);
+    color: white;
+}
+
+.align
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form
+{
+    color: aquamarine;
+    background-color: rgb(43, 30, 80);
+    padding: 30px 100px;
+    border-radius: 17px;
+    box-shadow: 0px 0px 10px aquamarine;
+}
+
+input {
+    background-color: rgb(52, 35, 70);
+    color: white;
+}
+
+.enviar:hover
+{
+    background-color: aquamarine;
+    color: black;
+    transition: 0.3s;
+    box-shadow: 0px 0px 10px white;
+}
+
+
