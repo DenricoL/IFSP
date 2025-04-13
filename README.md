@@ -1,5 +1,5 @@
 # IFSP 
-Este repositório registra meus estudos no curso de Análise e Desenvolvimento de Sistemas no Intituto Federal de São Paulo, por cada semestre
+Este repositório registra meus estudos no curso de Análise e Desenvolvimento de Sistemas no Instituto Federal de São Paulo, por cada semestre
 
 # Diretórios:
 ## 2_2024.2 (segundo semestre)
