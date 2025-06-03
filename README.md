@@ -14,4 +14,10 @@ __Banco de Dados 2:__ pesquisas, atividades e registro de aulas sobre consultas 
 __WEB2:__ aplicações web em java, estudando servlets e JSP
 
 
+notas: 
+https://www.canva.com/design/DAGo4HG329E/GWhuENslCLwa140jJ9ls1g/edit?utm_content=DAGo4HG329E&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+
+https://youtu.be/9_1qiiJOAlM?si=MvtDaQzFDoFInxil
+
+
 
