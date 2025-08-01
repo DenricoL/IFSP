@@ -1,4 +1,4 @@
-- Nota: tive problemas no envio de um arquivo PDF ao classroom, então estou usando este diretório para o envio da atividade -
+- Nota: tive problemas no envio de um arquivo PDF ao classroom, então estou usando este diretório para o envio da atividade
 
 
 
