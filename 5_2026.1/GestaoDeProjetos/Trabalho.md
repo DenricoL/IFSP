@@ -1,5 +1,4 @@
 # Relatório Técnico: Audio Game Espacial com Foco em Acessibilidade Visual
-**Projeto Integrador I — 2026**
 
 ---
 
