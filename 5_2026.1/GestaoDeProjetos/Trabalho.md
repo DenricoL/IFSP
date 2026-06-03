@@ -1,4 +1,9 @@
 # Relatório Técnico: Audio Game Espacial com Foco em Acessibilidade Visual
+Equipe:  
+
+Gerente de Projeto: Raissa Miranda 
+
+Desenvolvedores: Lucas Tadeu e Douglas Enrico 
 
 ---
 
@@ -153,8 +158,27 @@ A fase consistiu na preparação de infraestrutura e na distribuição clara das
 
 ## 6. Controles e Indicadores de Desempenho
 
-### 6.1 Status de Andamento
-O desenvolvimento do áudio-jogo "Defensores do Espaço" encontra-se em fase avançada de codificação e integração de mecânicas. Até o presente momento, a equipe atingiu a marca média de conclusão física planejada para o período. Registrou-se um pequeno desvio no cronograma original de entregas devido à alta concorrência de tempo com projetos e exames de outras matérias do semestre acadêmico.
+### 6.1 Status de Andamento Geral
+O desenvolvimento do áudio-jogo "Defensores do Espaço" encontra-se em fase avançada de codificação e integração de mecânicas. Até o presente momento, a equipe atingiu a marca média de conclusão física do escopo total idealizado. De acordo com o cronograma estabelecido no início do semestre para o Projeto Integrador I, a expectativa era estar na reta das entregas validadas. O pequeno desvio no cronograma ocorreu devido a desafios técnicos com outros projetos que os alunos estão envolvidos de outras matérias. 
 
-### 6.2 Alterações de Rota (Gestão de Escopo)
-Para mitigar os riscos de atraso e garantir a entrega de um produto funcional dentro do prazo est
+### 6.2 Alterações de Rota (Gestão de Mudanças e Escopo)
+Para garantir a entrega de um produto funcional, acessível e estável dentro do prazo limite estipulado pelos professores avaliadores, a gestão do projeto, liderada pela Raissa, aprovou um corte de conteúdo no jogo. 
+
+A ideia original previa um número maior de missões e desafios complexos de movimentação livre. Contudo, devido ao tempo consumido na estabilização dos scripts de áudio no Phaser, a equipe optou por reduzir a quantidade de níveis. O foco foi redirecionado estritamente para o polimento da Missão 1, missão 2 e para a robustez da interface guiada por voz, garantindo que o núcleo da acessibilidade do jogo opere sem falhas para a apresentação. 
+
+### 6.3 Análise de Custos (Esforço) e Desempenho da Curva S
+No contexto deste projeto acadêmico, a nossa Curva S mapeia o volume de horas investidas pela equipe, considerando o tempo que havíamos planejado gastar para cada entrega. 
+
+A curva demonstrou um consumo de horas muito superior ao estimado nas últimas semanas, caracterizando um "estouro de orçamento de tempo" nas fases de programação lógica e testes. 
+
+* **Orçamento Total de Esforço:** O projeto previu 1 mes de desenvolvimento acumulado pela equipe até a data da entrega. 
+* **Valor Planejado:** A linha de base indicava que deveríamos ter concluído a missão 2 essa semana. 
+* **Custo Real de Esforço:** O tempo efetivamente gasto com pesquisa de documentação, refatoração de código e debugging foi de 1 mês. 
+* **Valor Agregado:** O volume de mecânicas prontas e entregues equivale a 2 meses de trabalho do nosso planejamento original. 
+
+### 6.4 Indicadores de Desempenho (KPIs Acadêmicos)
+Para monitorar a reta final do semestre, os seguintes indicadores foram extraídos: 
+
+* **Índice de Desempenho de Prazo:** O índice reflete o impacto direto da concorrência de tempo com as entregas de outras disciplinas. Durante as semanas mais pesadas, a cada 10 dias de cronograma planejado, a equipe conseguia avançar o equivalente a apenas 9 dias de trabalho real. Como o calendário ficou muito apertado, o corte da Missão 3 foi uma medida fundamental de contenção de danos para que o ritmo de desenvolvimento se igualasse ao prazo final exigido pela banca avaliadora. 
+* **Índice de Eficiência de Esforço:** Este indicador mostra o redirecionamento estratégico de energia da equipe. Em vez de dividir a atenção em três fases e correr o risco de entregar um jogo incompleto ou cheio de bugs, o grupo investiu 1 mês inteiro de Microsoft esforço real para blindar o núcleo do projeto. Todo o tempo que seria diluído na criação e teste da Missão 3 foi totalmente realocado para polir o código e garantir que as Missões 1 e 2 funcionem de forma impecável do início ao fim. 
+* **Taxa de Estabilidade de Comandos:** A cada 20 comandos de voz emitidos no microfone, 19 comandos são reconhecidos e executados corretamente de primeira pelo sistema. Essa proporção confirma que a decisão de reduzir o escopo foi acertada: com o foco concentrado apenas nas Missões 1 e 2, foi possível refinar a lógica de sinônimos no Phaser, garantindo uma navegação robusta e segura para o dia da apresentação.
