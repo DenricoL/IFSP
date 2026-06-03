@@ -1,0 +1,9 @@
+1. Ao entrar 'help var', é apresentada uma lista com os nomes e uso de variáveis comuns no shell.
+
+2. Ao entrar 'cp --help', uma descrição aparece mostrando sobre o que o comando cp é, qual sua forma de uso e seu parâmetros.
+
+3. Ao entrar 'unzip --info', assim quando é utilizado o '--help', uma descrição aparece mostrando sobre o que o comando unzip é, qual sua forma de uso e seu parâmetros.
+
+4. 'man' é abreviação para manual. Este comando é unix-like, estando presente em qualquer distribuição de Linux. O comando serve como manual para ensinar o uso de outros comandos.
+
+5. Ambos atuam de forma semelhante, entretanto, o 'info' não funciona com todos os comandos.

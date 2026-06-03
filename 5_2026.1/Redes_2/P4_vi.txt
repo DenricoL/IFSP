@@ -1,0 +1,12 @@
+1. :s/ifsp/linux/g
+
+2. wq
+
+3. O vi é um editor de texto utilizado em sistemas Linux e Unix para criar e editar arquivos. Ele está presente ou disponível praticamente em todas as distribuições Linux e sistemas Unix, sendo um dos editores mais tradicionais desses ambientes. O documento também destaca o Vim (Vi Improved), que é uma versão aprimorada do vi.
+
+4. Sim. O vi pode abrir e modificar arquivos de texto ASCII e também arquivos binários. Entretanto, ele é mais adequado para edição de arquivos de texto, pois arquivos binários podem ficar corrompidos se forem alterados incorretamente.
+
+5. Modo de comandos: permite navegar pelo arquivo, executar comandos, copiar, excluir, procurar textos, salvar e sair do editor.
+Modo de edição: permite inserir e modificar texto diretamente no arquivo usando comandos como i, a, o, A e I.
+
+6. Memorizar os comandos, entender a diferença entre o modo de comandos e o modo de edição e realizar operações de busca e substituição sem cometer erros. Com a prática, a navegação e a edição tornaram-se mais fáceis.

@@ -1,0 +1,24 @@
+01. O usuário root é utilizado para realizar comandos e atividades administrativas no sistema.
+
+02. O usuário root tem a capacidade de ler, modificar e deletar qualquer coisa no sistema. O poder total do root pode oferecer um risco quando utilizado para tarefas rotineiras, já que ações irreversíveis podem ser realizadas usando este usuário.
+
+03. "su" significa switch user. O comando serve para alterar o usuário dentro do sistema. O comando pode ser utilizado quando for necessário utilizar comandos administrativos (usuário root), ou então apenas para mudar o usuário comum que está sendo utilizado no sistema.
+
+04. "passwd" serve para alterar a senha do usuário que está sendo usado. "useradd" serve para adicionar um novo usuário ao sistema, ou atualizar informações de um usuário existente. "userdel" serve para deletar um usuário do sistema.
+
+
+05. Exemplos de comandos básicos:
+	mkdir: cria um novo diretório
+	rmdir: deleta diretórios
+	cd: muda o diretório
+	ls: lista o conteúdo presente no diretório acessado
+
+
+
+06. Shell script são comandos e arquivos interpretados por um Shell.
+
+07. Sim. Comandos de manipulação de arquivos e navegação de diretórios podem ser feitos através de um Shell Script.
+
+08. Shell Scripts são utilizados principalmente para manipulação de arquivos e dados e administração de sistemas.
+
+09. As principais linguagens de Shell Scripts que podem ser usadas no Linux são: Bash, SH, Zsh e Fish.
